@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My Calculator</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-grid.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/HesapMakinesi.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#toplama').click(function () {
+                var result = $.HesapMakinesi.Toplama(parseInt($("#txtSayiBir").val()), parseInt($("#txtSayiIki").val()));
+                $("#result").html(result);
+            });
+            $('#cikarma').click(function () {
+                var result = $.HesapMakinesi.Cikarma(parseInt($("#txtSayiBir").val()), parseInt($("#txtSayiIki").val()));
+                $("#result").html(result);
+            });
+            $('#carpma').click(function () {
+                var result = $.HesapMakinesi.Carpma(parseInt($("#txtSayiBir").val()), parseInt($("#txtSayiIki").val()));
+                $("#result").html(result);
+            });
+            $('#bolme').click(function () {
+                var result = $.HesapMakinesi.Bolme(parseInt($("#txtSayiBir").val()), parseInt($("#txtSayiIki").val()));
+                $("#result").html(result);
+            });
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row" style="margin-top:50px">
+            <div class="col-lg-12">
+                <figure>
+                    <pre>
+                     İşlem Sonucu:<kbd style="font-size:20px;"><span id="result"></span></kbd>
+                    </pre>
+                </figure>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-4 ">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <label>Birinci Sayi:</label>
+                        <input type="text" value="" class="form-control" id="txtSayiBir" />
+                        <label>İkinci Sayi:</label> 
+                        <input type="text" value="" class="form-control" id="txtSayiIki" />                                       
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="btn-group">
+                            <button class="btn btn-default" id="toplama">Toplama</button>
+                            <button class="btn btn-default" id="cikarma">Çıkarma</button>
+                            <button class="btn btn-default" id="carpma">Çarpma</button>
+                            <button class="btn btn-default" id="bolme">Bölme</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

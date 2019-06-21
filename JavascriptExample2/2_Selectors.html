@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>GÖKKUŞAĞI MISIN SEN BEE</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.0.0.js"></script>
+
+    <style>
+        .metin {
+            width: 170px;
+            height: 150px;
+            float: left;
+            margin-right: 12px;
+            margin-left: 10px;
+            border-radius: 10px;
+            box-shadow: 7px 7px 5 px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 7px 7px 5 px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 7px 7px 5 px 0px rgba(0,0,0,0.75);
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+        //    var renkler = [];
+        //    var index = true;
+
+        //    $("p").click(function () {
+        //        var etiketler = document.getElementsByTagName("p");
+        //        if (index == true) {
+        //            for (var i = 0; i < etiketler.length; i++) {
+        //                renkler.push($(etiketler[i]).css("backgroundColor"));
+        //            }
+        //            $("p").css("background-color", $(this).css("backgroundColor"));
+        //            index = false;
+        //        }
+        //        else {
+        //            for (var i = 0; i < etiketler.length; i++) {
+        //                $(etiketler[i]).css("background-color", renkler[i]);
+        //            }
+        //            index = true;
+        //        }
+        //    })
+
+        
+
+        var index = 0;
+        var renkler = [];
+        var time = 0;
+
+        $("p").click(function () {
+            index = 0;
+            var color = $(this).css("background-color");
+
+            var elemanlar = document.getElementsByTagName("p");
+
+            for (var i = 0; i < elemanlar.length; i++) {
+                renkler.push($(elemanlar[i]).css("background-color"));
+            }
+            time = elemanlar.length * 600;
+
+            $("p").css("background-color", "white");
+
+            var timer = setInterval(function () {
+                if (index == elemanlar.length) {
+                    clearInterval(timer);
+                }
+                $(elemanlar[index]).css("background-color", color);
+                index++;
+            }, 500);
+
+            setTimeout(function () {
+                index = 0;
+
+                var secondTimer = setInterval(function () {
+                    if (index == elemanlar.length) {
+                        clearInterval(secondTimer)
+                    }
+                    $(elemanlar[index]).css("background-color", renkler[index]);
+                    index++;
+                }, 500);
+            }, time);
+        })
+
+     });
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row" style="margin-top:50px">
+            <p class="metin" style="background-color:#ffd800"></p>
+            <p class="metin" style="background-color:#ff0000"></p>
+            <p class="metin" style="background-color:#0094ff"></p>
+            <p class="metin" style="background-color:#0026ff"></p>
+            <p class="metin" style="background-color:#000000"></p>
+            <p class="metin" style="background-color:#00ff21"></p>
+            <p class="metin" style="background-color:#ff6a00"></p>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

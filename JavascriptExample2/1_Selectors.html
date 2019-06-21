@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> Uğur BAĞCI Blog</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#ornekBir').click(function () {
+                $('div.paragflar p:first-child').css('color', '#8BFF3F');
+            });
+        })
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="row" style="margin-top:50px">
+            <div class="col-lg-12">
+                <div class="btn-group btn-group-justified">
+                    <a id="ornekBir" class="btn btn-default">Örnek Bir</a>
+                    <a id="ornekIki" class="btn btn-default ">Örnek Iki</a>
+                    <a id="ornekUc" class="btn btn-default">Örnek Uc</a>
+                    <a id="ornekDort" class="btn btn-default">Örnek Dort</a>
+                    <a id="ornekBes" class="btn btn-default">Örnek Bes</a>
+                </div>
+            </div>
+        </div>
+   </div>
+<hr/>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="paragraflar">
+                <p class="well well-sm">
+                    Burası birinci paragrafım
+                </p>
+                <p class="well well-sm">
+                    Burası ikinci paragrafım
+                </p>
+                <p class="well well-sm">
+                    Burası üçüncü paragrafım
+                </p>
+
+                <div class="col-lg-6"></div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="kontroller">
+                            <div class="form-group">
+                                <label>Ad</label>
+                                <input class="form-control" type="text" name="name" value="" /><br />
+                            </div>
+                            <div class="form-group">
+                                <label>Soyadı</label>
+                                <input class="form-control" type="text" name="name" value="" /><br />
+
+                            </div>
+                            <div class="form-group">
+                                <label>Mail</label>
+                                <input class="form-control" type="text" name="name" value=""/><br />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="btn btn-primary btn-block" name="name" value="Kaydet"/>
+                            </div>
+                   </div>
+               </div>
+            </div>
+          </div>
+        </div>
+   </div>
+
+
+</body>
+</html>

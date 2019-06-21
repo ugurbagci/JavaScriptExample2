@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-grid.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-3.0.0.js"></script>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('#btnKaydet').click(function () {
+                var personel = Object.create(Personel);
+
+                personel.FirstName = $("input[name='FirstName']").val();
+                personel.LastName = $("input[name='LastName']").val();
+                personel.Age = $("input[name='Age']").val();
+
+                var message = ("Personel Adı: {0}\nPersonel Soyadı: {1}\nPersonel Yası: {2}", personel.FirstName, personel.LastName, personel.Age);
+
+                alert(message);
+
+                var newMessage = PersonelFormatter(personel);
+                alert(newMessage);
+
+            })
+        })
+
+    </script>
+
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row" style="margin-top:50px">
+            <div class="col-lg-offset-3 col-lg-6 col-lg-offset-3">
+                <div class="form-control">
+
+                    <div class="from-group">
+                        <label class="control-label">
+                            Personel Adı
+                        </label>
+
+                        <div class="from-group">
+                            <input type="text" name="FirstName" class="from-control" />
+                        </div>
+
+                        <div class="from-group">
+                            <label class="control-label">
+                                Personel Soyadı
+                            </label>
+                        </div>
+
+                        <div class="from-group">
+                            <input type="text" name="LastName" class="form-control" />
+                        </div>
+
+                        <div class="from-group">
+                            <label class="control-label">
+                                Personel Yası
+                            </label>
+                        </div>
+
+                        <div class="from-group">
+                            <input type="text" name="Age" class="form-control" />
+                        </div>
+
+                        <div class="from-group">
+                            <input type="button" id="btnKaydet" class="btn btn-primary" value="Kaydet" />
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
